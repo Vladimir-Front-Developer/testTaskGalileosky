@@ -9,7 +9,7 @@ import { LetterComponent } from './letter/letter.component';
   declarations: [ChallengeComponent, LetterComponent],
   imports: [
     CommonModule,
-    ChallengeRoutingModule
+    ChallengeRoutingModule,
   ]
 })
 export class ChallengeModule { }

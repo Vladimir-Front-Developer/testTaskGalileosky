@@ -1,1 +1,12 @@
-<p>letter works!</p>
+<div class="contentLetter">
+    <h1 class="letter">{{letterItem.id}}</h1>
+    <div class="imgContent">
+        <img [src]="letterItem.linkImg" [alt]="letterItem.word">
+        <p><span>{{letterItem.word[0]}}</span>{{letterItem.word.substr(1)}}</p>
+    </div>
+</div>
+<div class="searchLetterWord">
+    <p>Найдите (кликните) букву <span class="letterWord">{{letterItem.word[0].toLowerCase()}}</span> в слове:</p>
+    <p class="word">Трактор</p>
+    
+</div>

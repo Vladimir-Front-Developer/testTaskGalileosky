@@ -1,2 +1,4 @@
-<p>challenge works!</p>
 <router-outlet></router-outlet>
+<div class="blockList">
+  <a *ngFor="let letter of letterList" [routerLink]="letter">{{letter}}</a>
+</div>
