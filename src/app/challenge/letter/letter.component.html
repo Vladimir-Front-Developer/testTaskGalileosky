@@ -7,6 +7,6 @@
 </div>
 <div class="searchLetterWord">
     <p>Найдите (кликните) букву <span class="letterWord">{{letterItem.word[0].toLowerCase()}}</span> в слове:</p>
-    <p class="word">Трактор</p>
+    <p class="word" [innerHTML]="word" (click)="changeWord($event)"></p>
     
 </div>
