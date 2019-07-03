@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import reference from 'src/app/reference.js';
+import reference from 'src/app/config/reference.js';
 
 @Injectable({ providedIn: 'root' })
 export class LocalService {

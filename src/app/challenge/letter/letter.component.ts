@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LocalService } from 'src/app/local.service';
+import { LocalService } from 'src/app/services/local.service';
 
 export interface word {
   id: string,
