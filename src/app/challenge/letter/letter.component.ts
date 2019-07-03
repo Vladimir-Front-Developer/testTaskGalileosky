@@ -1,13 +1,8 @@
-import { Component, Injectable } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LocalService } from 'src/app/local.service';
 
 export interface word {
-  id: string,
-  word: string,
-  linkImg: string
-}
-export interface letterItem {
   id: string,
   word: string,
   linkImg: string
@@ -21,30 +16,35 @@ export interface letterItem {
 })
 
 export class LetterComponent {
-  letterItem = {
-    id: 'Аа',
-    word: 'Арбуз',
-    linkImg: 'https://fruitonline.ru/image/cache/catalog/miniwatermelon-800x1000.jpg'
-  }
+  letterItem: any
   word: string
   wordList: Array<word>
   wordRef: Array<string>
-  
+  visiblCheck: boolean
+  checkLetter: string
+  checkColor: string
   constructor(private ar: ActivatedRoute, private ls:LocalService) {
     this.wordList = ls.get('wordList')
     this.wordRef = ls.get('wordReference')
-
     ar.params.subscribe(param => {
-      this.letterItem = this.wordList.find(el => {
-        return param.id === el.id
-      })
+      this.letterItem = this.wordList.find(el => { return param.id === el.id })
       const randomWord = this.findRandomWord(this.letterItem.id[1], this.wordRef)
       this.word = this.getSpanWord(randomWord, this.letterItem.id[1])
+      this.visiblCheck = false
     })
   }
   
   changeWord(event){
-    if(event.target.tagName === 'SPAN') event.target.style.color = 'red'
+    this.visiblCheck = true
+    if(event.target.tagName === 'SPAN') {
+      event.target.style.color = 'red'
+      this.checkLetter = 'Правильно!'
+      this.checkColor = 'backgroundGreen'
+    } else {
+      setTimeout(() => { this.visiblCheck = false }, 1000)
+      this.checkLetter = 'Не правильно!'
+      this.checkColor = 'backgroundRed'
+    }
   }
 
   findRandomWord(letter, ref){
@@ -61,7 +61,6 @@ export class LetterComponent {
 
   getSpanWord(str, letter){
       const arr = str.split(letter)
-      console.log(arr)
       let word = ''
       arr.forEach((el, idx) => {
         if(arr.length - 1 === idx){

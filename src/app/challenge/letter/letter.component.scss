@@ -1,22 +1,39 @@
 .contentLetter{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    h1{
-        color: red;
-        font-size: 5em;
+    width: 100vw;
+    max-width: 900px;
+    max-height: 50vh;
+    .letter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        h1{
+            font-size: 10em;
+            color: red;
+        }
     }
     .imgContent{
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 50%;
         img{
-            margin-left: 20px;
-            max-width: 15vw;
-            max-height: 15vh;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            max-height: 300px;
         }
-        span{
-            color: red;
+        p{
+            width: 100%;
+            margin-top: 0;
+            font-size: 4em;
+            text-align: center;
+            span{
+                color: red;
+            }
         }
     }
 }
@@ -24,6 +41,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
+    max-width: 900px;
+    max-height: 50vh;
     .letterWord{
         color: red;
         font-size: 3em;
@@ -32,8 +52,26 @@
         margin: 0;
         padding: 0;
     }
-    .word{
-        font-size: 2em;
-        margin-bottom: 10px;
+    .wordConteiner{
+        display: flex;
+        .word{
+            cursor: pointer;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .backgroundGreen{
+            height: 20px;
+            padding: 5px;
+            color: white;
+            border-radius: 15px;
+            background-color: green;
+        }
+        .backgroundRed{
+            height: 20px;
+            padding: 5px;
+            color: white;
+            border-radius: 15px;
+            background-color: red;
+        }
     }
 }

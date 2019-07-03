@@ -5,6 +5,7 @@ import { LetterComponent } from './letter/letter.component';
 
 const routes: Routes = [
   { path: 'challenge', component: ChallengeComponent, children: [
+    { path: '', redirectTo: 'Аа', pathMatch: 'full'},
     { path: ':id', component: LetterComponent }
   ]}
 ];

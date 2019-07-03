@@ -18,7 +18,7 @@ export default {
         {
             id: "Гг",
             word: "Горох",
-            linkImg: "https://foodsinfo.ru/wp-content/uploads/2017/06/goroh-18.jpg"
+            linkImg: "https://www.meteonova.ru/agro-articles/pictures/pea1.jpg"
         },
         {
             id: "Дд",

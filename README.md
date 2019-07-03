@@ -1,3 +1,20 @@
+#Инструкции к приложению
+
+Время на выполнение потрачено не более 8-12 часов. Точного времени сказать не могу. Делал промежутками в свободное время.
+
+В приложении использовались:
+@angular/material 7.3.7
+Angular v7.3.9
+Node v10.15
+Npm v6.9
+
+Выполнить следующие команды:
+npm install - подтянуть все нужные пакеты
+ng s -o - собрать и открыть приложение в дефолтном браузере(если без флага -o открыть http://localhost:4200)
+
+
+
+
 # TestTaskGalileosky
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.

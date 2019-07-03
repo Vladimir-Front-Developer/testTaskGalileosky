@@ -1,9 +1,13 @@
+@import '~@angular/material/theming';
 .blockList{
     display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
-    padding: 10px;
-    a{
-        margin: 5px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid #b7d1d0;
+    margin: 10px;
+    a{ margin: 5px; }
+    a.active{
+        text-decoration: underline;
+        color: red;
     }
 }

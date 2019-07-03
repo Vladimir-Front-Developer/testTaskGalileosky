@@ -1,0 +1,11 @@
+.content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .mat-raised-button{
+        font-size: 5em;
+        padding: 30px;
+    }
+}
